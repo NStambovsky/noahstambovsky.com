@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 360 360" role="img" aria-labelledby="title desc">
+  <title id="title">Spotter sprocket logo</title>
+  <desc id="desc">A dark sprocket mark with a small signal dot.</desc>
+  <rect width="360" height="360" rx="36" fill="#f5f0e7"/>
+  <g transform="translate(180 180)">
+    <path fill="#273137" d="M18-126 31-91a96 96 0 0 1 26 11l34-16 32 32-16 34a96 96 0 0 1 11 26l35 13v46l-35 13a96 96 0 0 1-11 26l16 34-32 32-34-16a96 96 0 0 1-26 11l-13 35h-46l-13-35a96 96 0 0 1-26-11l-34 16-32-32 16-34a96 96 0 0 1-11-26l-35-13v-46l35-13a96 96 0 0 1 11-26l-16-34 32-32 34 16a96 96 0 0 1 26-11l13-35h46Zm-23 78a70 70 0 1 0 0 140 70 70 0 0 0 0-140Z"/>
+    <circle cx="-5" cy="22" r="31" fill="#f27f4f"/>
+    <circle cx="76" cy="-82" r="18" fill="#83c5be"/>
+  </g>
+</svg>
