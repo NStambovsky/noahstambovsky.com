@@ -1,3 +1,5 @@
+> Current deployment and rollback notes: [September 2026 refresh](docs/2026-09-26-refresh.md). Follow those notes before the historical setup instructions below.
+
 # noahstambovsky.com Cloudflare Pages Site
 
 Static replacement for the Carrd version of `noahstambovsky.com`.
@@ -22,7 +24,7 @@ Git-integrated settings for this static site:
 3. Upload the contents of this folder.
 4. Build command: leave blank.
 5. Add `noahstambovsky.com` as the custom domain.
-6. Optional: add `www.noahstambovsky.com`; `_redirects` sends it to the apex domain.
+6. The live Pages domain is `www.noahstambovsky.com`. The bare domain redirects to www through Cloudflare zone rules.
 
 ## Later migrations
 

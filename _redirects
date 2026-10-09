@@ -1,1 +1,2 @@
-https://www.noahstambovsky.com/* https://noahstambovsky.com/:splat 301!
+# Bare-domain redirects are managed in Cloudflare zone rules.
+# Do not redirect www back to the bare domain here.
