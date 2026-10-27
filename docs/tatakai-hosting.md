@@ -29,3 +29,5 @@ Source 0b5e474 adds an explicit Capture enemy piece button with target choices a
 ## Ultra tactics cards
 
 Source d7f82f6 adds eight cards, one random starting card per side, three new market offers each turn, held cards, unlimited card plays, and extra actions. Fresh approaches still require an opponent response turn before capture. Legacy Ultra saves migrate once without losing the board or coins. 64 tests pass; browser checks cover card purchases, chains, draws, extra actions, persistence, computer card turns, and phone/desktop layouts.
+
+Home-advantage clarification (d6e3cf0): the home resident gets first capture without rolling; if both remain after that response turn, the invader may capture next turn without rolling. Extra actions cannot bypass the response turn. 65 tests and browser verification pass.
