@@ -34,3 +34,12 @@ Twenty boss handicaps live in bosses.js. A saved d20 draw selects one on boss en
 EIGHT public files are required, including bosses.js and presentation.js. 87 checks and browser QA pass, including clear/payout events, speed presets, sound controls, reload/skip safety, persistent boss reveal, and SE viewports through 568×232.
 
 Latest Tatakai updates d20f52d and 242ad5c were preserved. Production rollback snapshot: 673dd0f7-f5cf-4be1-8c6f-14aa281d51ce. An isolated bundle /tmp/rogue-score-publish-20261027 avoids sharing another release’s staging folder.
+
+
+## Four-color builds
+
+Source commit 76bf13f. Adds Blue Regent and Golden Sovereign monochrome Gods, The Divide red/black God, The Kaleidoscope color-variety God, two mutually exclusive palette licenses, Spectrum Grant, Blue/Gold Seals, and four round-long Wash cards. Color priority is Wash, God, palette license, original paint. Washes persist through rerolls/hands/reload and clear on next-round entry. Original colors are never deleted by overrides. Palette counts and an inspect dialog expose every die’s original and effective color.
+
+Save schema 6 migrates schema-5 builds without resetting progress. Catalog now has 36 Gods, 15 vouchers, and 21 actions; shop size and rare extra-die weights retained. 95 automated checks pass; browser QA includes painting under Red Queen, saved temporary colors, permanent paint beneath a Wash, color provenance, no console errors, and SE layouts at 568×232, 568×320, 667×375 plus 320px portrait.
+
+Production rollback snapshot: b7531860-f550-4f8f-80b3-3f9a78cf8d4f. Current Tatakai site commits ca8c063 and 2b1be48 retained. Isolated release bundle: /tmp/rogue-color-publish-20261027.
