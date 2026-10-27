@@ -50,3 +50,12 @@ Production rollback snapshot: b7531860-f550-4f8f-80b3-3f9a78cf8d4f. Current Tata
 Source commit d2fa784. Only Full and Instant remain. Full steps last 650–850ms plus 450ms for multiplier hits; no rush through long chains. Old Quick becomes Full; old Turbo becomes Instant. Existing saves retain schema 6 and all progress. Adds Pure Run (+12 Chips, ×1.5 Mult for same-color Run), Prism Run (+16 Chips, +3 Mult for four-color Run), and Twin Pacts (+12 Chips, +2 Mult when both value-pairs match colors). Underlying Run/Two Pair Studies and Gods remain active. All additions precede multipliers; Pure Run multiplier follows God multipliers. Glass Ceiling weakens combo ×Mult too. Combo names appear in preview, score breakdown and history; collection has a three-combo tab. Four-die cap remains.
 
 100 automated checks pass. Browser measured ~0.8s ordinary steps, ~1.2s multiplier pauses, distinct payout stages, collection discovery, and Full-to-Instant single-commit safety. Preserves latest Tatakai commits e43bd07 and 70f9066. Rollback snapshot: 158072c6-d13f-4bcd-b3fa-d01f8ac5d6cb. Isolated bundle: /tmp/rogue-combo-publish-20261027.
+
+
+## Four-die start and Pair balance
+
+Source commit ba6539e. New runs start with four base dice, exactly one each of red/black/blue/gold. Original-color persistence and the four-die submission cap remain. Existing saves keep their three/four base dice, tray, money, levels and accumulated Echo growth. No restart is forced.
+
+Pair base Chips 12→8 (base Mult stays 2); Study gains +6 Chips / +0.5 Mult; same-color bonus +1. Twins gives Pair ×1.5, Two Pair ×2; Looking Glass gives same-color Pair ×1.25, Two Pair ×1.5. Echo gains +0.5 per Pair / +1 per Two Pair; fractional growth is validated and saved. Hermit now gives ×1.5 with four or fewer tray dice. Eight-die tray cap and rare extra-die gating retained. Rules/collection/Study previews match.
+
+104 automated checks pass. Exhaustive 1,296-roll audit: best hand Pair 576, Run 288, Triplet 120, Two Pair 90, Prism Run 72, Quads 6, Highest Die 144; average best score 75.25 before rerolls/upgrades. Browser QA verifies one die of every color, Pair Study + Echo + Twins at 99 points with +0.5 saved Echo growth, reload safety, and SE layouts. Rollback snapshot c0df4900-8385-433c-8d9b-01957ef3f9ff. Latest Tatakai updates f84f666/f472ea7 preserved. Isolated release bundle /tmp/rogue-four-publish-20261027.
