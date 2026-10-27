@@ -21,3 +21,7 @@ Source app commit `5b9e6af`: agents must deploy onto their home numbered half be
 ## Home capture advantage update
 
 Source PR: https://github.com/NStambovsky/tatakai/pull/1 (88e572a). Six requires an agent already on the enemy numbered half for base entry. Home agents may escape or countercapture before an invader can spend a later turn capturing in place. All 33 engine checks and browser control checks passed, including 320px layout. Version 4 starts fresh saves. Previous production deployment: 832b115e-a972-43cf-ac62-ff47db6f7f16.
+
+## Capture controls and Ultra mode
+
+Source 0b5e474 adds an explicit Capture enemy piece button with target choices and explanations. New game offers Classic or Ultra. Ultra includes capture/base income, recruitment, rerolls, chosen rolls, and queued enemy rolls; both sides use the same costs and limits. Existing saves remain Classic-compatible. 54 engine tests pass; browser checks cover all powers, mode selection, capture choices, saves, AI turns, and phone/desktop layout. Deploy the five public Tatakai files within the complete site bundle.
