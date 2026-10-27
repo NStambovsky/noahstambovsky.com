@@ -43,3 +43,10 @@ Source commit 76bf13f. Adds Blue Regent and Golden Sovereign monochrome Gods, Th
 Save schema 6 migrates schema-5 builds without resetting progress. Catalog now has 36 Gods, 15 vouchers, and 21 actions; shop size and rare extra-die weights retained. 95 automated checks pass; browser QA includes painting under Red Queen, saved temporary colors, permanent paint beneath a Wash, color provenance, no console errors, and SE layouts at 568×232, 568×320, 667×375 plus 320px portrait.
 
 Production rollback snapshot: b7531860-f550-4f8f-80b3-3f9a78cf8d4f. Current Tatakai site commits ca8c063 and 2b1be48 retained. Isolated release bundle: /tmp/rogue-color-publish-20261027.
+
+
+## Slower Full animation and four-die combos
+
+Source commit d2fa784. Only Full and Instant remain. Full steps last 650–850ms plus 450ms for multiplier hits; no rush through long chains. Old Quick becomes Full; old Turbo becomes Instant. Existing saves retain schema 6 and all progress. Adds Pure Run (+12 Chips, ×1.5 Mult for same-color Run), Prism Run (+16 Chips, +3 Mult for four-color Run), and Twin Pacts (+12 Chips, +2 Mult when both value-pairs match colors). Underlying Run/Two Pair Studies and Gods remain active. All additions precede multipliers; Pure Run multiplier follows God multipliers. Glass Ceiling weakens combo ×Mult too. Combo names appear in preview, score breakdown and history; collection has a three-combo tab. Four-die cap remains.
+
+100 automated checks pass. Browser measured ~0.8s ordinary steps, ~1.2s multiplier pauses, distinct payout stages, collection discovery, and Full-to-Instant single-commit safety. Preserves latest Tatakai commits e43bd07 and 70f9066. Rollback snapshot: 158072c6-d13f-4bcd-b3fa-d01f8ac5d6cb. Isolated bundle: /tmp/rogue-combo-publish-20261027.
