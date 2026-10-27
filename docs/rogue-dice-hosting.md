@@ -24,3 +24,13 @@ Source commit 1d2383f. New runs start with three dice from red/black/blue/gold; 
 The public app now requires SIX files including catalog.js. Save migration retains old trays/builds, adds new fields, resets ghost Echo growth when unowned, and replaces old shop stock with a smaller market. 72 engine checks pass, plus browser checks for fallback scoring, animation/skip single-commit behavior, colors, cap enforcement, collections, and small-screen layouts. The optional fourth action slot can scroll within its panel at extremely reduced browser heights.
 
 Pre-release rollback deployment: 7659b75e.noahstambovsky.pages.dev.
+
+## On-table scoring and variable bosses
+
+Source commit 3ed4f3f. Scoring now plays on the table with lifting dice, firing Gods, distinct additive/multiplicative effects, optional rising Web Audio, score transfer, target break, and wallet payout. Full/Quick/Turbo/Instant speed and sound preferences persist. A hand commits once before presentation; skip, Instant switching, hidden tabs, and reloads cannot duplicate scoring. The old blocking scoring modal is removed.
+
+Twenty boss handicaps live in bosses.js. A saved d20 draw selects one on boss entry and avoids previous bosses. Draws and resource handicaps survive reloads; acknowledgement applies once. Existing current legacy bosses are preserved.
+
+EIGHT public files are required, including bosses.js and presentation.js. 87 checks and browser QA pass, including clear/payout events, speed presets, sound controls, reload/skip safety, persistent boss reveal, and SE viewports through 568×232.
+
+Latest Tatakai updates d20f52d and 242ad5c were preserved. Production rollback snapshot: 673dd0f7-f5cf-4be1-8c6f-14aa281d51ce. An isolated bundle /tmp/rogue-score-publish-20261027 avoids sharing another release’s staging folder.
