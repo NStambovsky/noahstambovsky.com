@@ -17,3 +17,7 @@ The creator’s short rules reel is linked in the game. Browser edge-case conven
 Source app commit `5b9e6af`: agents must deploy onto their home numbered half before crossing. No direct camp-to-camp infiltration. Captures enter the empty adjacent partner space. A resident defender can use a six to remove an infiltrator without moving. These follow the user’s deployment clarification and the creator’s longer video: https://www.facebook.com/tim.grayson/videos/2068646447088149/ .
 
 21 gameplay checks pass. Browser validation confirms only the two home-side matching spaces are offered for an initial deployment and resident camp defence removes an infiltrator without moving defenders. Previous-version saves are superseded because the rules changed.
+
+## Home capture advantage update
+
+Source PR: https://github.com/NStambovsky/tatakai/pull/1 (88e572a). Six requires an agent already on the enemy numbered half for base entry. Home agents may escape or countercapture before an invader can spend a later turn capturing in place. All 33 engine checks and browser control checks passed, including 320px layout. Version 4 starts fresh saves. Previous production deployment: 832b115e-a972-43cf-ac62-ff47db6f7f16.
