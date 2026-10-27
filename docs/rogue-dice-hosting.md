@@ -8,3 +8,11 @@ Static five-file app; no build or server. Link is in projects.html. Source commi
 Validated with 29 engine checks; browser gameplay, shop purchases, actions, permanent die upgrades, saves, and dialogs; and layouts from 320 to 1280px, including eight dice and five equipped Gods on a small phone.
 
 Pre-Rogue production deployment for rollback: 54bd14f5.noahstambovsky.pages.dev.
+
+## Modes, bosses, Two Pair, and SE landscape
+
+Source update: 1272ce2. Two Pair is a distinct 24 Chips × 3 Mult hand, with its own upgrades, two Echo growth, and one Twins multiplier. Casual uses 100 + 100 × zero-based round targets with no bosses. Hard bosses conclude Antes 3 and 6; target scale is ×2 from Ante 4 and ×4 from Ante 7. Pale House blocks the base color bonus; Iron Hand blocks normal rerolls but allows Second Wind. Save versions 1/2 migrate to version 3 in Hard mode without resetting the build.
+
+The stakes strip, next-round shop preview, and map explain the target progression. Landscape gameplay was measured at 568×320 and 667×375, plus browser-height reductions to 568×260 and 568×232, with eight dice, five Gods, and three actions. Main controls, dice, inventories and stats fit without page scrolling. Shops and inspect dialogs remain scrollable. 43 engine checks and browser-mode/migration/boss checks pass.
+
+Pre-update rollback deployment: 997784b1.noahstambovsky.pages.dev.
