@@ -25,3 +25,7 @@ Source PR: https://github.com/NStambovsky/tatakai/pull/1 (88e572a). Six requires
 ## Capture controls and Ultra mode
 
 Source 0b5e474 adds an explicit Capture enemy piece button with target choices and explanations. New game offers Classic or Ultra. Ultra includes capture/base income, recruitment, rerolls, chosen rolls, and queued enemy rolls; both sides use the same costs and limits. Existing saves remain Classic-compatible. 54 engine tests pass; browser checks cover all powers, mode selection, capture choices, saves, AI turns, and phone/desktop layout. Deploy the five public Tatakai files within the complete site bundle.
+
+## Ultra tactics cards
+
+Source d7f82f6 adds eight cards, one random starting card per side, three new market offers each turn, held cards, unlimited card plays, and extra actions. Fresh approaches still require an opponent response turn before capture. Legacy Ultra saves migrate once without losing the board or coins. 64 tests pass; browser checks cover card purchases, chains, draws, extra actions, persistence, computer card turns, and phone/desktop layouts.
