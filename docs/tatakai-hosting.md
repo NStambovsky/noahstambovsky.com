@@ -47,3 +47,7 @@ The v13 release wraps the same 24 positions into two perimeter routes, with base
 ## Crosscamp release
 
 Renamed to Crosscamp at /crosscamp/; legacy /tatakai/ links redirect. Storage key retained for save continuity. Linear now captures on landing, uses 3 base health, and returns scoring agents home after one damage. Six targets home-half invaders. 93 tests and browser capture/damage/victory/migration checks pass. Cache v14. Classic and Ultra rules preserved.
+
+## Extreme public release — 2026-10-28
+
+Publishes the current shared v5 Linear/Ultra build plus Extreme. Extreme has 48 spaces, ten agents, five health, three independent dice, interchangeable tracks, full-row blockades and coordinated attacks. Each agent may spend one movement die per turn; reverse can combine with a second die for its distance. Actions and individual die skips are supported. All 90 tests pass and browser combination, save, blockade and AI checks pass. Cache v17. The public bundle now contains seven files including extreme.js. v4 saves remain untouched; v5 saves use crosscamp-v5.
