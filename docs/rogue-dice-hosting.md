@@ -83,3 +83,7 @@ Echo, Wayfarer, Ember and Kaleidoscope track five relevant committed hands, then
 Production rollback snapshot: 719a91b2-c14f-4a82-b4e7-8e9ca565f4f2. Newer Crosscamp source 35496b0 and 66 unrelated public files preserved. Isolated release bundle /tmp/rogue-evolution-publish-20261028. Eight public Rogue Dice files remain sufficient.
 
 Visual follow-up source d69c0fd keeps God cards fully bright while their interactions are locked during scoring.
+
+## Pixel table redesign — 2026-10-28
+
+Source d43245b adds original SVG portraits for all 40 Gods, local OFL pixel typography, green felt, a desktop run console, illustrated shops and compact mobile controls. All 130 engine checks pass. Public assets include rogue-dice/assets/. Saved run schema remains version 7. Previous production: 784d5792.
