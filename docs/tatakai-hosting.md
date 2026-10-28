@@ -59,3 +59,7 @@ Cache v18. Vault still jumps blockades but cannot land on protected pairs; switc
 ### Linear/Ultra home response — 2026-10-28
 
 Cache v19. Approaching an enemy defender on its home turf creates a contested shared space. The home defender can capture without rolling; an invader can capture only after the defender’s full response turn. Either moving clears the face-off. Ultra extra actions do not bypass the response. Strike Ahead only targets home-side invaders. Added capture button, choices, guidance and contested outlines. Existing v5 saves remain compatible. All 118 tests pass plus browser checks for both capture priorities, Ultra lockout and phone overflow.
+
+### Extreme home blockade response — 2026-10-28
+
+Cache v20. Enemy pairs invading your turf can be attacked immediately; home-defending pairs require preparation, a full response turn, then a die next turn to finish. Applies to coordinated assault and Strike Ahead. Moving any involved blocker or attacker, or capturing an attacker, cancels preparation. Pending attacks and readiness save; UI shows warnings, target outlines and prepare/finish controls. Existing saves without pending attacks remain compatible. 130 tests pass plus browser preparation/finishing and phone layout checks.
