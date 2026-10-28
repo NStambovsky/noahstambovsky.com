@@ -81,3 +81,5 @@ Echo, Wayfarer, Ember and Kaleidoscope track five relevant committed hands, then
 130 automated checks pass, including all 120 five-slot arrangements, copied multipliers under Glass Ceiling, Taxman/fog/Hush behavior, every evolution branch, resource tradeoffs, save migration and probability invariants. Browser QA verifies Full chain/payout at 192 points, two die repeats and Ember 4→5 goal, Furnace selection, touch reorder and desktop drag, reload persistence, native sound, Full→Instant single-commit safety and SE landscape down to 568×232.
 
 Production rollback snapshot: 719a91b2-c14f-4a82-b4e7-8e9ca565f4f2. Newer Crosscamp source 35496b0 and 66 unrelated public files preserved. Isolated release bundle /tmp/rogue-evolution-publish-20261028. Eight public Rogue Dice files remain sufficient.
+
+Visual follow-up source d69c0fd keeps God cards fully bright while their interactions are locked during scoring.
