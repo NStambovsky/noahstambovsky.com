@@ -39,3 +39,7 @@ Source 8c18aaf keeps board, controls and tabbed card rack visible together at la
 ## Linear release — 2026-10-27
 
 Source commit 710d81b adds Linear: two lanes of 12 spaces, forward movement by roll, six optional die specials, and unrestricted turn skipping. All difficulties support the mode. 89 tests pass; browser checks cover all six specials, saving, desktop and mobile. Cache suffix v12. Deploy all six public files, now including linear.js, which engine.js imports for all modes.
+
+### Square Linear board
+
+The v13 release wraps the same 24 positions into two perimeter routes, with bases at opposite corners and mirrored 1–6 labels. Existing games and movement rules remain compatible. Browser checks cover labels, all 24 spaces, movement across a bend, and phone overflow.
