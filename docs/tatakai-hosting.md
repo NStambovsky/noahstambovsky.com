@@ -63,3 +63,7 @@ Cache v19. Approaching an enemy defender on its home turf creates a contested sh
 ### Extreme home blockade response — 2026-10-28
 
 Cache v20. Enemy pairs invading your turf can be attacked immediately; home-defending pairs require preparation, a full response turn, then a die next turn to finish. Applies to coordinated assault and Strike Ahead. Moving any involved blocker or attacker, or capturing an attacker, cancels preparation. Pending attacks and readiness save; UI shows warnings, target outlines and prepare/finish controls. Existing saves without pending attacks remain compatible. 130 tests pass plus browser preparation/finishing and phone layout checks.
+
+### Extreme Roles Edition — 2026-10-28
+
+Source b823e7f, cache v21. Fixed armies: six Agents, two Guards, two Runners; five health and two repair tokens. Guard pairs cannot be vaulted; Guards cannot enter the enemy base. Runners advance 1 up to the movement die, cannot capture, and may support attacks. Visible role deployment choices, symbols, Guard walls, movement markers and repair counters. Previous Extreme saves gain roles/tokens once and incompatible Runner attacks clear. Full printable tabletop rules at /crosscamp/extreme-rules.html; eight public files now required. 147 tests pass with browser deployment, role, repair, Guard-wall and phone checks.
