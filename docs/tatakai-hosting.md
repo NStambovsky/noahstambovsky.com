@@ -43,3 +43,7 @@ Source commit 710d81b adds Linear: two lanes of 12 spaces, forward movement by r
 ### Square Linear board
 
 The v13 release wraps the same 24 positions into two perimeter routes, with bases at opposite corners and mirrored 1–6 labels. Existing games and movement rules remain compatible. Browser checks cover labels, all 24 spaces, movement across a bend, and phone overflow.
+
+## Crosscamp release
+
+Renamed to Crosscamp at /crosscamp/; legacy /tatakai/ links redirect. Storage key retained for save continuity. Linear now captures on landing, uses 3 base health, and returns scoring agents home after one damage. Six targets home-half invaders. 93 tests and browser capture/damage/victory/migration checks pass. Cache v14. Classic and Ultra rules preserved.
