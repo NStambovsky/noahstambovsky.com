@@ -55,3 +55,7 @@ Publishes the current shared v5 Linear/Ultra build plus Extreme. Extreme has 48 
 ### Extreme protected pairs and repair — 2026-10-28
 
 Cache v18. Vault still jumps blockades but cannot land on protected pairs; switching routes cannot capture a protected pair. Strike Ahead and coordinated attacks remain ways to break pairs. Six now repairs one base health with a home agent, up to five, consuming one die. 96 tests pass, plus browser checks for protected destinations, Vault passage, repair controls, log and save persistence. Existing v5 saves remain compatible.
+
+### Linear/Ultra home response — 2026-10-28
+
+Cache v19. Approaching an enemy defender on its home turf creates a contested shared space. The home defender can capture without rolling; an invader can capture only after the defender’s full response turn. Either moving clears the face-off. Ultra extra actions do not bypass the response. Strike Ahead only targets home-side invaders. Added capture button, choices, guidance and contested outlines. Existing v5 saves remain compatible. All 118 tests pass plus browser checks for both capture priorities, Ultra lockout and phone overflow.
