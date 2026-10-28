@@ -67,3 +67,7 @@ Cache v20. Enemy pairs invading your turf can be attacked immediately; home-defe
 ### Extreme Roles Edition — 2026-10-28
 
 Source b823e7f, cache v21. Fixed armies: six Agents, two Guards, two Runners; five health and two repair tokens. Guard pairs cannot be vaulted; Guards cannot enter the enemy base. Runners advance 1 up to the movement die, cannot capture, and may support attacks. Visible role deployment choices, symbols, Guard walls, movement markers and repair counters. Previous Extreme saves gain roles/tokens once and incompatible Runner attacks clear. Full printable tabletop rules at /crosscamp/extreme-rules.html; eight public files now required. 147 tests pass with browser deployment, role, repair, Guard-wall and phone checks.
+
+### Separate simple Classic mode — 2026-10-28
+
+Cache v22. Classic uses six identical pieces, one die, two routes, three base health, two Command tokens, exact forward movement or retreat-one on any roll, and the existing home response priority. No objectives, checkpoints or die-specific specials. Draws at 160 turns. Its UI has a five-point rules summary and clean board. Other modes remain supported. 170 tests pass, plus browser retreat, Command, AI, rules and phone checks.
