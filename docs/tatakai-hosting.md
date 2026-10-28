@@ -35,3 +35,7 @@ Home-advantage clarification (d6e3cf0): the home resident gets first capture wit
 ## Desktop rack and opponent reveals
 
 Source 8c18aaf keeps board, controls and tabbed card rack visible together at laptop sizes. Opponent card plays show a paced reveal with actual effect, Continue/Escape, automatic resume, and a persisted summary. Browser checks cover 1280×720 through 1440×900, full hands, mobile 320px, tab navigation, reveal sequencing, and reload without replay. All 65 game tests pass.
+
+## Linear release — 2026-10-27
+
+Source commit 710d81b adds Linear: two lanes of 12 spaces, forward movement by roll, six optional die specials, and unrestricted turn skipping. All difficulties support the mode. 89 tests pass; browser checks cover all six specials, saving, desktop and mobile. Cache suffix v12. Deploy all six public files, now including linear.js, which engine.js imports for all modes.
