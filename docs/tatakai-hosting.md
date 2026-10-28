@@ -51,3 +51,7 @@ Renamed to Crosscamp at /crosscamp/; legacy /tatakai/ links redirect. Storage ke
 ## Extreme public release — 2026-10-28
 
 Publishes the current shared v5 Linear/Ultra build plus Extreme. Extreme has 48 spaces, ten agents, five health, three independent dice, interchangeable tracks, full-row blockades and coordinated attacks. Each agent may spend one movement die per turn; reverse can combine with a second die for its distance. Actions and individual die skips are supported. All 90 tests pass and browser combination, save, blockade and AI checks pass. Cache v17. The public bundle now contains seven files including extreme.js. v4 saves remain untouched; v5 saves use crosscamp-v5.
+
+### Extreme protected pairs and repair — 2026-10-28
+
+Cache v18. Vault still jumps blockades but cannot land on protected pairs; switching routes cannot capture a protected pair. Strike Ahead and coordinated attacks remain ways to break pairs. Six now repairs one base health with a home agent, up to five, consuming one die. 96 tests pass, plus browser checks for protected destinations, Vault passage, repair controls, log and save persistence. Existing v5 saves remain compatible.
