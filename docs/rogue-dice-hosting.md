@@ -87,3 +87,7 @@ Visual follow-up source d69c0fd keeps God cards fully bright while their interac
 ## Pixel table redesign — 2026-10-28
 
 Source d43245b adds original SVG portraits for all 40 Gods, local OFL pixel typography, green felt, a desktop run console, illustrated shops and compact mobile controls. All 130 engine checks pass. Public assets include rogue-dice/assets/. Saved run schema remains version 7. Previous production: 784d5792.
+
+## Rolling colors and voucher inventory — October 29, 2026
+
+Fresh runs roll values and colors together; holds preserve both and permanent paint locks colors. Older saves migrate to schema 8 with fixed colors locked to preserve prior paint. Vouchers beside Stakes map lists owned upgrades and purchased levels. Tide, Crown, Prism and Trinity gain two evolution choices each after five relevant hands. 140 tests pass, including paint/hold/roll paths, palette precedence, exact 52/256 natural Pact trays, migrations and all eight new paths. Browser checks cover voucher ownership, evolution selection, desktop and iPhone SE bounds. Previous production: 4ac87607.
