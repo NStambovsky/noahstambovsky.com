@@ -91,3 +91,7 @@ Source d43245b adds original SVG portraits for all 40 Gods, local OFL pixel typo
 ## Rolling colors and voucher inventory — October 29, 2026
 
 Fresh runs roll values and colors together; holds preserve both and permanent paint locks colors. Older saves migrate to schema 8 with fixed colors locked to preserve prior paint. Vouchers beside Stakes map lists owned upgrades and purchased levels. Tide, Crown, Prism and Trinity gain two evolution choices each after five relevant hands. 140 tests pass, including paint/hold/roll paths, palette precedence, exact 52/256 natural Pact trays, migrations and all eight new paths. Browser checks cover voucher ownership, evolution selection, desktop and iPhone SE bounds. Previous production: 4ac87607.
+
+## Build variety expansion — October 29, 2026
+
+Catalog grows to 52 Gods, 29 actions and 21 vouchers, with original portraits for every God. Four Pillars and Pactkeeper add two evolution paths each. New content supports Quads, Pacts, fixed and rolling paint, small hands, targeted manipulation and conditional retriggers. Market Pass discounts refreshes without expanding shop size. Existing 8-die, 4-submitted-die and God-slot caps stay intact. Schema 9 adds zero-valued voucher fields while retaining current saves. 168 tests pass; browser checks cover new actions, evolution choice, Pact scoring, all collection counts and mobile bounds. Previous production: 64faba46.
