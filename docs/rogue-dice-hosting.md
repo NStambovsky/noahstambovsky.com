@@ -105,3 +105,9 @@ Common Striker now gives two repeats; common Portrait applies ×2 on every score
 Validation: 207 tests, including naturally earned full-run victories. Complete seeded audit: 760 runs across 19 sets × 2 modes × 20 seeds, wins in every combination. 42 of 57 retained Hard examples finished without Portrait+Striker. Results are automated-policy samples, not human win rates. Source BALANCE.md and balance/full-run-results.json contain the report and representative full histories. Browser checks cover all 19 set starts, weight previews, selected Seals, Echo purchase, six God slots, repeated multiplier presentation, safe skip/reload, desktop and iPhone SE bounds.
 
 Public deployment must include new rogue-dice/sets.js. Previous production: 27ea3f78.
+
+## Selected-die details and Crowned callout — October 30, 2026
+
+Selecting dice now shows a contextual inspector for the most recently selected die and a Crowned definition whenever any selected die qualifies. The callout names the qualifying dice and explains d6/d4 faces and lack of an innate score bonus. Full details covers all selected dice: paint/overrides, holds, permanent Chip/Mult bonuses, loading, Haunted effects and exact underlying probabilities. Portrait phones get an inline summary beneath the tray; desktop and compact landscape use the side panel. Clearing/deselecting removes stale callouts. No engine or save schema change.
+
+Validation: 207 existing tests pass. Isolated browser checks cover d6/d4 definitions, selection groups, held status, paint overrides, enhancements, clearing, full details, and desktop/portrait/iPhone SE bounds. Crowned definition and the full-details button fit together without scrolling on 568×320. Previous production: 96ec5f73.
