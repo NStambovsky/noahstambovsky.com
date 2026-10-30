@@ -95,3 +95,13 @@ Fresh runs roll values and colors together; holds preserve both and permanent pa
 ## Build variety expansion — October 29, 2026
 
 Catalog grows to 52 Gods, 29 actions and 21 vouchers, with original portraits for every God. Four Pillars and Pactkeeper add two evolution paths each. New content supports Quads, Pacts, fixed and rolling paint, small hands, targeted manipulation and conditional retriggers. Market Pass discounts refreshes without expanding shop size. Existing 8-die, 4-submitted-die and God-slot caps stay intact. Schema 9 adds zero-valued voucher fields while retaining current saves. 168 tests pass; browser checks cover new actions, evolution choice, Pact scoring, all collection counts and mobile bounds. Previous production: 64faba46.
+
+## All dice sets and verified Hard balance — October 30, 2026
+
+All 19 sets are unlocked under New run, with exact face/color weights and starting resources, chosen Seals, Ghost rituals and optional Echo token purchases. New set profiles and enhancements save in schema 10; older runs migrate to Standard with purchases, paint and evolutions retained. Four Pillars progress safely adapts to its three-Quad goal.
+
+Common Striker now gives two repeats; common Portrait applies ×2 on every score of the first Crowned die. Beacon, Tribune and Conductor extend die-trigger builds. Retriggers replay eligible die effects without recursively firing retrigger Gods. Wayfarer/Pactkeeper grow on qualifying scores. All maximum-face effects adapt to d4. Hard removes post-boss doubling: bosses 810/6480, final 23100; Equilibrium doubles targets. Iron Hand costs one starting reroll; Hush and Three’s Company affect only the first hand; Glass Ceiling reduces multiplier bonuses by 25%. Rarity is selected first at 65/25/9/1, redistributed if unavailable.
+
+Validation: 207 tests, including naturally earned full-run victories. Complete seeded audit: 760 runs across 19 sets × 2 modes × 20 seeds, wins in every combination. 42 of 57 retained Hard examples finished without Portrait+Striker. Results are automated-policy samples, not human win rates. Source BALANCE.md and balance/full-run-results.json contain the report and representative full histories. Browser checks cover all 19 set starts, weight previews, selected Seals, Echo purchase, six God slots, repeated multiplier presentation, safe skip/reload, desktop and iPhone SE bounds.
+
+Public deployment must include new rogue-dice/sets.js. Previous production: 27ea3f78.
