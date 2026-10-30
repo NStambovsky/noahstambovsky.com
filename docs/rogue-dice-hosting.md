@@ -111,3 +111,7 @@ Public deployment must include new rogue-dice/sets.js. Previous production: 27ea
 Selecting dice now shows a contextual inspector for the most recently selected die and a Crowned definition whenever any selected die qualifies. The callout names the qualifying dice and explains d6/d4 faces and lack of an innate score bonus. Full details covers all selected dice: paint/overrides, holds, permanent Chip/Mult bonuses, loading, Haunted effects and exact underlying probabilities. Portrait phones get an inline summary beneath the tray; desktop and compact landscape use the side panel. Clearing/deselecting removes stale callouts. No engine or save schema change.
 
 Validation: 207 existing tests pass. Isolated browser checks cover d6/d4 definitions, selection groups, held status, paint overrides, enhancements, clearing, full details, and desktop/portrait/iPhone SE bounds. Crowned definition and the full-details button fit together without scrolling on 568×320. Previous production: 96ec5f73.
+
+## Visible die-type badges — October 30, 2026
+
+Every tray die now has a persistent d4/d6 badge, with its type also in the accessible button name. The face-count badge sits separately from permanent-modifier and HELD labels. No scoring or save change. Browser checks cover d4/d6 sets, held dice, rerolls, eight-die trays, desktop, portrait and iPhone SE landscape. All 207 existing tests pass. Previous production: 31f611aa.
