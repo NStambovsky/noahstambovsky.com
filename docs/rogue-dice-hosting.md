@@ -143,3 +143,8 @@ Deploy the complete `/tmp/rogue-enhancements-publish-20261031` bundle. All unrel
 Source `212a161`: Full / Fast / Instant in game and practice. Fast budgets all trigger events together (up to 1.8s), then short score transfer/clear/payout beats, with a 2.8s completion guard. Full pacing is retained; Instant skips the sequence. Preferences persist and actual scoring remains committed once before animation.
 
 222 tests passed. Isolated browser on 568×320 measured 49 actual engine steps plus clear/payout at 2.575 seconds; Fast persisted on reload and no browser errors occurred. Complete bundle `/tmp/rogue-fast-publish-20261031` preserves unrelated bytes from the preceding production release.
+
+
+## Current complete site bundle after Clarity installation — October 31, 2026
+
+Use `/tmp/site-clarity-publish-20261031` as the latest preserved complete public bundle (deployment `a231eb83`, public release `e953b4a`). Site-wide Clarity is installed via `/site-analytics.js?v=20261031-2` on every HTML entry point. When replacing Rogue Dice or practice HTML from its standalone source, retain/reinsert this site-only include; retain the root loader and other current public pages. Older pre-Clarity bundle directories omit analytics and must not replace this current complete site. Independent Rogue Dice forks must not inherit Noah’s tracker. See clarity-setup.md for consent, masking and live verification.

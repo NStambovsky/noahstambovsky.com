@@ -1,6 +1,6 @@
 # Site-wide Microsoft Clarity setup
 
-Status: installation configured October 31, 2026 using existing project `nylti7eg1i`, extracted from the public tracking snippet on https://www.sevenworldtales.com/ at Noah’s explicit request. Live collection must be verified after deployment. The existing Carrd site is unchanged.
+Status: installation configured October 31, 2026 using existing project `nylti7eg1i`, extracted from the public tracking snippet on https://www.sevenworldtales.com/ at Noah’s explicit request. Final deployment `a231eb83` from commit `e953b4a` is live and verified. The existing Carrd site is unchanged.
 
 ## Project
 
@@ -40,3 +40,6 @@ Pre-deployment browser QA: zero vendor requests before acceptance; explicit anal
 
 
 Live verification of initial release `1deb4b16`: the real project tag and client script returned HTTP 200; Clarity collection returned HTTP 204. No Clarity requests occurred before acceptance. Consent revocation removed `_clck` and `_clsk` cookies and prevented loading after reload. All 87 checked public files matched the released bundle. A 568×320 overlap check found the floating privacy control covered a God card, so the final revision embeds Privacy & analytics in Rogue Dice Help and the practice safety area instead. Other site pages retain the small floating control.
+
+
+Final live verification: collection HTTP 204; Privacy & analytics opens through Rogue Dice Help; no floating control overlaps the game; revocation unloads Clarity and leaves zero Clarity cookies; no browser errors. All 24 non-contact HTML pages plus the loader match the final bundle exactly; the transformed contact response also contains the final loader include. The earlier full-bundle comparison checked 87 files with no mismatches. No changes were made to Sevenworldtales hosting or DNS.
