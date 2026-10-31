@@ -155,3 +155,12 @@ Use `/tmp/site-clarity-publish-20261031` as the latest preserved complete public
 Source release `b4a4c8e`: Best hand is hidden unless explicitly enabled by the unchecked New run checkbox. The per-run `bestHandAssist` boolean is stored alongside state/selection/holds; old saves default off without losing game state. Canceling setup does not change the current run, opt-in survives reload, and every new setup defaults off. Highest Die still only scores when the entire tray has no regular hand; a lone selection now explains the fallback restriction. No engine, schema or balance changes.
 
 222 tests pass. Isolated iPhone SE-size browser verifies old save funds remain 39, assist defaults off, explicit opt-in works and reloads, cancel leaves the save unchanged and starting another default run hides the control. Complete public bundle `/tmp/rogue-assist-publish-20261031` changes only rogue-dice/index.html and app.js from the Clarity baseline. All 25 tracking includes, root consent loader and other public bytes are preserved.
+
+
+## October 31, 2026 — Crimson Vault redesign
+
+Game source `f54ff6e`: black/crimson minimalist casino-dungeon theme, horizontal desktop run strip, horizontal etched God cards, centered play table with primary actions above secondary tools and a right inventory. Compact landscape supports 568×320 and 568×260, including eight dice and large preview totals; portrait scrolls vertically. Shop, practice, setup and inspection share the new styling. Existing readable fonts and original portraits are retained; functional four-color dice stay distinct. No engine, balance or schema changes.
+
+The new public asset **theme.css** must be deployed with the other 13 files and assets. The standalone builder includes it. Site-specific tracking includes remain in game/practice HTML with version `20261031-crimson`; the root analytics loader has a game-only color override, with consent behavior unchanged. Independent instances do not inherit this tracker.
+
+Validation: 222 tests pass; desktop/laptop/SE portrait and landscape inspected; 8-die/5-God/full-action fixture, setup cancel, saved scoring reload, Study purchase and round continuation pass. A 49-step Fast chain completed at 2.611s. The complete mobile tutorial reaches Step 13 and 760 points without horizontal overflow. Latest complete public release bundle: `/tmp/rogue-crimson-publish-20261031`; all unrelated public bytes are preserved from the assist/Clarity baseline.
