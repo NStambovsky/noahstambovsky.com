@@ -148,3 +148,10 @@ Source `212a161`: Full / Fast / Instant in game and practice. Fast budgets all t
 ## Current complete site bundle after Clarity installation — October 31, 2026
 
 Use `/tmp/site-clarity-publish-20261031` as the latest preserved complete public bundle (deployment `a231eb83`, public release `e953b4a`). Site-wide Clarity is installed via `/site-analytics.js?v=20261031-2` on every HTML entry point. When replacing Rogue Dice or practice HTML from its standalone source, retain/reinsert this site-only include; retain the root loader and other current public pages. Older pre-Clarity bundle directories omit analytics and must not replace this current complete site. Independent Rogue Dice forks must not inherit Noah’s tracker. See clarity-setup.md for consent, masking and live verification.
+
+
+## October 31, 2026 — optional hand-finding assist
+
+Source release `b4a4c8e`: Best hand is hidden unless explicitly enabled by the unchecked New run checkbox. The per-run `bestHandAssist` boolean is stored alongside state/selection/holds; old saves default off without losing game state. Canceling setup does not change the current run, opt-in survives reload, and every new setup defaults off. Highest Die still only scores when the entire tray has no regular hand; a lone selection now explains the fallback restriction. No engine, schema or balance changes.
+
+222 tests pass. Isolated iPhone SE-size browser verifies old save funds remain 39, assist defaults off, explicit opt-in works and reloads, cancel leaves the save unchanged and starting another default run hides the control. Complete public bundle `/tmp/rogue-assist-publish-20261031` changes only rogue-dice/index.html and app.js from the Clarity baseline. All 25 tracking includes, root consent loader and other public bytes are preserved.
