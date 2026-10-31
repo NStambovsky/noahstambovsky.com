@@ -164,3 +164,10 @@ Game source `f54ff6e`: black/crimson minimalist casino-dungeon theme, horizontal
 The new public asset **theme.css** must be deployed with the other 13 files and assets. The standalone builder includes it. Site-specific tracking includes remain in game/practice HTML with version `20261031-crimson`; the root analytics loader has a game-only color override, with consent behavior unchanged. Independent instances do not inherit this tracker.
 
 Validation: 222 tests pass; desktop/laptop/SE portrait and landscape inspected; 8-die/5-God/full-action fixture, setup cancel, saved scoring reload, Study purchase and round continuation pass. A 49-step Fast chain completed at 2.611s. The complete mobile tutorial reaches Step 13 and 760 points without horizontal overflow. Latest complete public release bundle: `/tmp/rogue-crimson-publish-20261031`; all unrelated public bytes are preserved from the assist/Clarity baseline.
+
+
+## October 31, 2026 — selectable neutral Standard set
+
+Game source `26357a8` exposes the existing neutral Standard baseline as the first of 20 unlocked sets and defaults fresh visitors to it. Four fair d6 dice, four equal-probability colors, three hands, three rerolls, four God slots, three action slots and $8, without starting actions/Gods/vouchers/enhancements or special rules. Existing saved runs remain intact, including legacy three-die Standard saves. Engine scoring and target curves are unchanged.
+
+224 tests pass, including Standard profile validation, and mobile browser confirms the fresh default, 20 options, equal-weight preview and saved set on reload. The already-live Crimson Vault redesign was verified against all 88 applicable public files; mobile scoring, reloads and the matching Clarity panel pass. Latest complete bundle is `/tmp/rogue-standard-publish-20261031`; it preserves the redesign, all site tracking includes and unrelated public assets. Twin Pacts continues to use Two Pair Studies; no separate Study or balance change was added.
