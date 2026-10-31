@@ -1,10 +1,10 @@
 # Site-wide Microsoft Clarity setup
 
-Status: prepared October 31, 2026; **not activated or deployed**. The browser is waiting for Noah to sign in to Microsoft Clarity. No project ID has been supplied or invented. The loader returns immediately with an empty project ID.
+Status: installation configured October 31, 2026 using existing project `nylti7eg1i`, extracted from the public tracking snippet on https://www.sevenworldtales.com/ at Noah’s explicit request. Live collection must be verified after deployment. The existing Carrd site is unchanged.
 
 ## Project
 
-Create or reuse one Clarity project named `noahstambovsky.com` with website URL `https://www.noahstambovsky.com/`. Clarity calls this a project, not a sub-account. A single project can cover the site pages and subdomains. Filter game usage by `/rogue-dice/` and the `site_section` custom tag. No dedicated Clarity connector was found; use the browser or supply the public project ID from Settings → Setup. Never request the owner's password or private API/export token.
+Reuse the existing project currently installed on Sevenworldtales; no new project or sub-account was created. Clarity calls this a project, not a sub-account. A single project can cover the site pages and subdomains. Filter game usage by `/rogue-dice/` and the `site_section` custom tag. No dedicated Clarity connector was found; use the browser or supply the public project ID from Settings → Setup. Never request the owner's password or private API/export token.
 
 ## Prepared implementation
 
@@ -30,3 +30,10 @@ The site-section tag distinguishes main-site, rogue-dice, crosscamp and canvas-l
 ## Visual release check
 
 Production game index.html, style.css, app.js and tutorial.html match the last deployed release (`8691c35`, Cloudflare deployment `80cb1b25`). Bundled readable fonts, clearer Play hand/Reroll controls, inspectable scoring and guided practice are live. The broader modern visual redesign has not been implemented; the arcade theme remains.
+
+
+## Installation release
+
+The complete current public bundle is `/tmp/site-clarity-publish-20261031`. All 25 HTML entry points include `/site-analytics.js?v=20261031`; all other existing public asset bytes are preserved. `site_domain` and `site_section` tags distinguish this domain and Rogue Dice from the existing Sevenworldtales site. Only the public Clarity project ID is reused; no account credentials or API token are stored. Keep this site-only include when replacing public game/practice HTML in future releases. Standalone Rogue Dice source/builds do not inherit it.
+
+Pre-deployment browser QA: zero vendor requests before acceptance; explicit analytics consent with advertising denied; site_domain/site_section tags; dynamic private fields masked; a played Rogue Dice save survives reload unchanged; revocation stops the loader on reload; no browser errors. All unchanged non-HTML production bytes are preserved. Existing deployed HTML entry points that were absent from Git are captured in this release so their tracking additions are reviewable.

@@ -1,15 +1,17 @@
 /* This site's Clarity project only. Never copy its ID into independent game instances. */
 (()=>{
- const PROJECT_ID=''; // Set after the site owner's Clarity project is created.
+ const PROJECT_ID='nylti7eg1i'; // Existing project copied from Sevenworldtales with owner authorization.
  if(!/^[a-z0-9]{6,20}$/.test(PROJECT_ID)||window.__noahAnalytics)return;
  window.__noahAnalytics=true;
  const KEY='noah-site-analytics-consent-v1',MAX_AGE=180*86400000;
  let started=false,choice=null;
  try{const saved=JSON.parse(localStorage.getItem(KEY));if(saved&&['granted','denied'].includes(saved.value)&&Date.now()-saved.at>=0&&Date.now()-saved.at<MAX_AGE)choice=saved.value;}catch{}
- const mask=()=>document.querySelectorAll('form,input,textarea,[contenteditable=true]').forEach(el=>el.setAttribute('data-clarity-mask','true'));
- function start(){if(started||choice!=='granted')return;started=true;mask();new MutationObserver(mask).observe(document.body,{childList:true,subtree:true});
+ const selector='form,input,textarea,[contenteditable=true]';
+ function mask(root=document){if(root.matches?.(selector))root.setAttribute('data-clarity-mask','true');root.querySelectorAll?.(selector).forEach(el=>el.setAttribute('data-clarity-mask','true'));}
+ function start(){if(started||choice!=='granted')return;started=true;mask();new MutationObserver(records=>{for(const record of records)for(const node of record.addedNodes)if(node.nodeType===1)mask(node);}).observe(document.body,{childList:true,subtree:true});
   window.clarity=window.clarity||function(){(window.clarity.q=window.clarity.q||[]).push(arguments);};
   window.clarity('consentv2',{analytics_Storage:'granted',ad_Storage:'denied'});
+  window.clarity('set','site_domain',location.hostname);
   window.clarity('set','site_section',location.pathname.startsWith('/rogue-dice')?'rogue-dice':location.pathname.startsWith('/crosscamp')||location.pathname.startsWith('/tatakai')?'crosscamp':location.pathname.startsWith('/canvas-lite')?'canvas-lite':'main-site');
   const script=document.createElement('script');script.async=true;script.src='https://www.clarity.ms/tag/'+PROJECT_ID;script.dataset.noahClarity='true';document.head.append(script);
  }
