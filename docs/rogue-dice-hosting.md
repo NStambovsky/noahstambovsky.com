@@ -115,3 +115,15 @@ Validation: 207 existing tests pass. Isolated browser checks cover d6/d4 definit
 ## Visible die-type badges — October 30, 2026
 
 Every tray die now has a persistent d4/d6 badge, with its type also in the accessible button name. The face-count badge sits separately from permanent-modifier and HELD labels. No scoring or save change. Browser checks cover d4/d6 sets, held dice, rerolls, eight-die trays, desktop, portrait and iPhone SE landscape. All 207 existing tests pass. Previous production: 31f611aa.
+
+## Bundled readable fonts and guided practice — October 31, 2026
+
+Atkinson Hyperlegible regular/bold TTF assets replace locally installed numeral-font dependencies; the included OFL license is public. Main numeric counters use the bundled readable face with system sans fallback, while pixel portraits/branding remain. Chromium platform-font inspection confirms the custom Atkinson face renders numeric glyphs, including 2/5.
+
+Play hand replaces Score hand; Reroll has a separate remaining counter. Question-mark buttons explain play controls and action cards. Busy preview effect pills are hidden; Score details opens a simple equation and optionally expanded scoring steps. Help now starts with Pick → Preview → Play, a short example and hand table; advanced rules are collapsible. First-time visitors can choose guided practice or play independently; restored runs are not interrupted.
+
+New tutorial.html/css/js and tutorial-model.js provide a 13-step, two-round guided practice with preset rolls/shop, real-engine scoring, holds/rerolls, earned Study/God purchases and the Crowned retrigger combo. Practice does not read or write the saved-run key and stores only separate onboarding/completion flags. Returning restores the exact original run. Rotation from a scrolled portrait view resets compact landscape to the full table.
+
+Validation: all 209 tests pass, including the real practice model’s 32-point Pair, 81-point Triplet, earned purchases and 760-point final combo. Browser checks cover first-visit invitation, saved-run continuity, complete practice with Full/Instant and skip, help controls, hidden breakdown, custom font usage, shop/restart/invalid selection, desktop and iPhone SE/portrait bounds. No game engine, balance or save-schema change.
+
+Deploy the four new tutorial files and three new readable-font assets alongside the existing game. Previous production: aeaed88f.
