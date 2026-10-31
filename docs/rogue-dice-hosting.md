@@ -136,3 +136,10 @@ Source release: `NStambovsky/rogue-dice` commit `8cd349d`. Adds Bonus, Mult, Luc
 Validation: 221 passing tests; 190 earned-money full-run simulations covering all 19 sets and both modes (61/95 Hard wins, 50/95 Casual wins; automated-policy sample, not human win rates). Mobile browser checks at 320×568 and 568×320 verify badges, eight-die trays, actual Lucky scoring, reload consistency, collection definitions and safe Full-animation skipping.
 
 Deploy the complete `/tmp/rogue-enhancements-publish-20261031` bundle. All unrelated public bytes preserved from the preceding complete production bundle; game and tutorial files copied from the tested source.
+
+
+## October 31, 2026 — Fast scoring speed
+
+Source `212a161`: Full / Fast / Instant in game and practice. Fast budgets all trigger events together (up to 1.8s), then short score transfer/clear/payout beats, with a 2.8s completion guard. Full pacing is retained; Instant skips the sequence. Preferences persist and actual scoring remains committed once before animation.
+
+222 tests passed. Isolated browser on 568×320 measured 49 actual engine steps plus clear/payout at 2.575 seconds; Fast persisted on reload and no browser errors occurred. Complete bundle `/tmp/rogue-fast-publish-20261031` preserves unrelated bytes from the preceding production release.
