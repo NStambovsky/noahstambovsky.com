@@ -127,3 +127,12 @@ New tutorial.html/css/js and tutorial-model.js provide a 13-step, two-round guid
 Validation: all 209 tests pass, including the real practice model’s 32-point Pair, 81-point Triplet, earned purchases and 760-point final combo. Browser checks cover first-visit invitation, saved-run continuity, complete practice with Full/Instant and skip, help controls, hidden breakdown, custom font usage, shop/restart/invalid selection, desktop and iPhone SE/portrait bounds. No game engine, balance or save-schema change.
 
 Deploy the four new tutorial files and three new readable-font assets alongside the existing game. Previous production: aeaed88f.
+
+
+## October 31, 2026 — permanent die enhancements
+
+Source release: `NStambovsky/rogue-dice` commit `8cd349d`. Adds Bonus, Mult, Lucky and Glass enhancement action cards, one replaceable enhancement slot per die, eight supporting Gods (64 total), 36 total actions, new original portraits and visible buff badges/details. Lucky classification uses the estimated preview before independent per-trigger rolls; actual outcomes and Glass replacements save before animation. Glass rolls one risk check per played die and replaces broken dice with a plain same-source/set die, losing investments. Schema 11 preserves previous runs. Score targets unchanged.
+
+Validation: 221 passing tests; 190 earned-money full-run simulations covering all 19 sets and both modes (61/95 Hard wins, 50/95 Casual wins; automated-policy sample, not human win rates). Mobile browser checks at 320×568 and 568×320 verify badges, eight-die trays, actual Lucky scoring, reload consistency, collection definitions and safe Full-animation skipping.
+
+Deploy the complete `/tmp/rogue-enhancements-publish-20261031` bundle. All unrelated public bytes preserved from the preceding complete production bundle; game and tutorial files copied from the tested source.
