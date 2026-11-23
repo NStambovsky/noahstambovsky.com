@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#f7f2e8">
+    <title>Baby Tracker Demo</title>
+    <link rel="icon" href="./icon.svg">
+    <link rel="stylesheet" href="./styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <aside class="panel" aria-label="Demo information"><strong>Interactive demo</strong><p>Fictional sample entries. Changes stay in this tab’s memory and disappear on refresh. No account or password needed. Please use made-up information.</p><p><a href="https://github.com/NStambovsky/baby-tracker-demo" target="_blank" rel="noopener">GitHub source</a> · <a href="https://github.com/NStambovsky/baby-tracker-demo/blob/main/docs/CLOUDFLARE.md" target="_blank" rel="noopener">Host your own</a> · <a href="https://github.com/NStambovsky/baby-tracker-demo/blob/main/docs/PHONE.md" target="_blank" rel="noopener">Add to your phone</a></p></aside>
+      <section id="login-view" class="panel" hidden>
+        <div>
+          <p class="eyebrow">Public demo · Fictional data</p>
+          <h1>Baby Tracker</h1>
+        </div>
+        
+
+      </section>
+
+      <section id="app-view" hidden>
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Baby Tracker</p>
+            <h1>Today</h1>
+          </div>
+          <button id="logout-button" class="ghost icon-button" type="button" aria-label="Reset demo">Reset demo</button>
+        </header>
+
+        <section id="active-card" class="active" hidden>
+          <div>
+            <p class="eyebrow">Feeding now</p>
+            <h2 id="active-side">Left side</h2>
+            <p id="active-time" class="timer">00:00</p>
+          </div>
+          <button id="stop-button" class="stop" type="button">Stop feeding</button>
+        </section>
+
+        <section id="sleep-card" class="active" hidden>
+          <div>
+            <p class="eyebrow">Sleeping now</p>
+            <h2 id="sleep-type">Nap</h2>
+            <p id="sleep-time" class="timer">00:00:00</p>
+          </div>
+          <button id="stop-sleep" class="stop" type="button">Stop sleep</button>
+        </section>
+
+        <section class="quick-actions" aria-label="Quick log actions">
+          <p class="section-label">Quick log</p>
+          <div class="controls">
+            <button id="start-left" class="start left" type="button"><span class="action-icon" aria-hidden="true">◐</span><span>Start Left</span></button>
+            <button id="start-right" class="start right" type="button"><span class="action-icon" aria-hidden="true">◑</span><span>Start Right</span></button>
+            <button id="start-bottle" class="start bottle" type="button"><span class="action-icon" aria-hidden="true">🍼</span><span>Bottle feed</span></button>
+            <button id="start-nap" class="start" type="button"><span class="action-icon" aria-hidden="true">☀</span><span>Nap</span></button>
+            <button id="start-bedtime" class="start" type="button"><span class="action-icon" aria-hidden="true">☾</span><span>Bedtime</span></button>
+            <button id="pee-button" class="event-button" type="button"><span class="action-icon" aria-hidden="true">💧</span><span>Pee</span></button>
+            <button id="poop-button" class="event-button" type="button"><span class="action-icon" aria-hidden="true">💩</span><span>Poop</span></button>
+            <button id="weigh-in-button" class="event-button" type="button"><span class="action-icon" aria-hidden="true">⚖</span><span>Weigh in</span></button>
+          </div>
+        </section>
+
+        <p id="save-error" class="error" role="alert" hidden></p>
+
+        <section class="note-box">
+          <div class="section-heading">
+            <label for="note-input">Add a note</label>
+            <button id="note-button" class="text-button" type="button">Save note</button>
+          </div>
+          <textarea id="note-input" rows="2" placeholder="Anything worth remembering?"></textarea>
+        </section>
+
+        <section class="log-section">
+          <div class="section-heading">
+            <div>
+              <p id="log-range" class="section-label">Last 3 days</p>
+              <h2>Log</h2>
+            </div>
+            <button id="refresh-button" class="ghost icon-button" type="button">Refresh</button>
+          </div>
+          <button id="history-button" class="ghost history-button" type="button" aria-controls="log-list" aria-expanded="false" disabled>See all entries</button>
+          <details class="log-filters" open>
+            <summary>Filter logs</summary>
+            <fieldset id="entry-type-filters">
+              <legend>Entry types <span class="muted">(select any; none means all)</span></legend>
+              <div class="filter-types">
+                <label><input type="checkbox" value="left"><span>Left feeding</span></label>
+                <label><input type="checkbox" value="right"><span>Right feeding</span></label>
+                <label><input type="checkbox" value="bottle"><span>Bottle feed</span></label>
+                <label><input type="checkbox" value="pee"><span>Pee</span></label>
+                <label><input type="checkbox" value="poop"><span>Poop</span></label>
+                <label><input type="checkbox" value="nap"><span>Nap</span></label>
+                <label><input type="checkbox" value="bedtime"><span>Bedtime</span></label>
+                <label><input type="checkbox" value="weigh-in"><span>Weigh-in</span></label>
+                <label><input type="checkbox" value="note"><span>Note</span></label>
+              </div>
+            </fieldset>
+            <div class="filter-dates">
+              <label>From <input id="filter-from" type="date"></label>
+              <label>Through <input id="filter-through" type="date"></label>
+            </div>
+            <p class="muted filter-hint">Leave dates blank to use Last 3 days or All time. Dates use Eastern time.</p>
+            <p id="filter-error" class="error" role="alert" hidden></p>
+            <button id="clear-filters" class="text-button" type="button">Clear filters</button>
+          </details>
+          <p id="log-results" class="muted" role="status" aria-live="polite"></p>
+          <div id="log-list" class="log-list" aria-live="polite"></div>
+          <nav id="history-pagination" class="history-pagination" aria-label="Entry history pages" hidden>
+            <button id="previous-page" class="ghost" type="button">Previous</button>
+            <span id="page-status" class="muted" aria-live="polite"></span>
+            <button id="next-page" class="ghost" type="button">Next</button>
+          </nav>
+        </section>
+
+        <section class="graphs-section">
+          <div class="section-heading">
+            <div>
+              <p class="section-label">Insights</p>
+              <h2>Graphs</h2>
+            </div>
+            <p class="muted graph-range">Uses the loaded entries</p>
+          </div>
+          <div class="graphs-grid">
+            <article class="graph-card">
+              <div class="graph-header">
+                <h3>Feeding times</h3>
+                <p>Line graph of start times over the last 48 hours.</p>
+              </div>
+              <div id="feeding-chart" class="chart-slot" aria-label="Feeding times chart"></div>
+            </article>
+            <article class="graph-card">
+              <div class="graph-header">
+                <h3>Pee and poop counts</h3>
+                <p>Bar chart of diaper changes by day.</p>
+              </div>
+              <div id="diaper-chart" class="chart-slot" aria-label="Pee and poop counts chart"></div>
+            </article>
+            <article class="graph-card">
+              <div class="graph-header">
+                <h3>Feeding counts</h3>
+                <p>Bar chart of left, right, and bottle sessions.</p>
+              </div>
+              <div id="feeding-count-chart" class="chart-slot" aria-label="Feeding counts chart"></div>
+            </article>
+          </div>
+        </section>
+      </section>
+    </main>
+    <dialog id="edit-dialog" class="edit-dialog" aria-labelledby="edit-dialog-title">
+      <form id="edit-form" class="edit-form">
+        <div class="section-heading">
+          <div>
+            <p class="section-label">Recent log</p>
+            <h2 id="edit-dialog-title">Edit entry</h2>
+          </div>
+          <button id="cancel-edit-button" class="ghost icon-button" type="button">Cancel</button>
+        </div>
+        <p id="edit-entry-type" class="edit-entry-type"></p>
+        <label>
+          Date and time
+          <input id="edit-started-at" name="startedAt" type="datetime-local" required>
+        </label>
+        <label id="edit-stopped-at-field" hidden>
+          Session ended
+          <input id="edit-stopped-at" name="stoppedAt" type="datetime-local">
+        </label>
+        <div id="edit-volume-field" hidden>
+          <label for="edit-volume">Estimated volume drank (optional)</label>
+          <div class="volume-controls">
+            <input id="edit-volume" type="number" min="0" step="any" inputmode="decimal" placeholder="Amount">
+            <select id="edit-volume-unit" aria-label="Volume unit"><option value="oz">oz</option><option value="ml">mL</option></select>
+          </div>
+          <p class="muted">The timer is already saved. You can add or change the amount later.</p>
+        </div>
+        <div id="edit-measurements" hidden>
+          <label for="edit-weight">Weight</label>
+          <div class="volume-controls">
+            <input id="edit-weight" type="number" min="0.001" step="any" inputmode="decimal" placeholder="Weight">
+            <select id="edit-weight-unit" aria-label="Weight unit"><option value="lb">lb</option><option value="kg">kg</option></select>
+          </div>
+          <label for="edit-height">Height (optional)</label>
+          <div class="volume-controls">
+            <input id="edit-height" type="number" min="0.001" step="any" inputmode="decimal" placeholder="Height">
+            <select id="edit-height-unit" aria-label="Height unit"><option value="in">in</option><option value="cm">cm</option></select>
+          </div>
+        </div>
+        <label>
+          Note
+          <textarea id="edit-note" name="note" rows="3" placeholder="Optional note"></textarea>
+        </label>
+        <p id="edit-error" class="error" role="alert"></p>
+        <div class="edit-actions">
+          <button id="delete-edit-button" class="delete-button" type="button">Delete entry</button>
+          <button id="save-edit-button" class="primary" type="submit">Save changes</button>
+        </div>
+      </form>
+    </dialog>
+    <div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>
